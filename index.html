@@ -1,1 +1,67 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P2P Multiplayer Game</title>
+  <style>
+    canvas {
+      background-color: lightgreen;
+      display: block;
+      margin: 0 auto;
+    }
+    #controls {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #mobile-controls {
+      display: none;
+    }
+    .arrow {
+      width: 50px;
+      height: 50px;
+      background-color: gray;
+      margin: 5px;
+      display: inline-block;
+      text-align: center;
+      line-height: 50px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+    @media (max-width: 600px) {
+      #mobile-controls {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <input id="playerName" type="text" placeholder="Enter your name">
+    <select id="color">
+      <option value="darkgreen">Dark Green</option>
+      <option value="pink">Pink</option>
+      <option value="red">Red</option>
+      <option value="yellow">Yellow</option>
+      <option value="blue">Blue</option>
+      <option value="purple">Purple</option>
+      <option value="brown">Brown</option>
+      <option value="black">Black</option>
+    </select>
+    <button id="startButton">Play</button>
+  </div>
+
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+  <div id="mobile-controls">
+    <div class="arrow" id="up">↑</div>
+    <div class="arrow" id="left">←</div>
+    <div class="arrow" id="down">↓</div>
+    <div class="arrow" id="right">→</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
